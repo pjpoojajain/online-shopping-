@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    .row.content {height: 1500px}
+    
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+    }
+  </style>
+</head>
+<body>
+        <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+              </button>
+            </div>
+            
+            
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav">
+                  <div class="row">
+                      
+                  <li class="active"> <a class="navbar-brand" href="#">Your Account</a></li>
+
+                </div>
+                
+              </ul>
+            </div>
+          </div>
+          
+        </nav>
+        
+<div class="container-fluid">
+        <form class="jumbotron" #ref="ngForm" (ngSubmit)="readData(ref)">
+          <div class="row content">
+            <div class="col-sm-3 sidenav">
+                <h4>Edit Profile</h4>
+                <hr>
+              <ul class="nav nav-pills nav-stacked">
+                <li class="active"><a href="#section1">personal information</a></li>
+                    <li><a href="#section2">family information</a></li>
+                     <li><a href="#section3">academic information</a></li>
+                     <li><a href="#section3">skill information</a></li>
+               </ul><br>
+               
+      
+      </div>
+      
+
+    <div class="col-sm-9">
+        <div class="container">
+            <h4><b>Student Family Information</b></h4>
+            <div class="row">
+                <div class="col col-lg-5 col-md-4 col-sm-12 col-12">
+                    <div class="form-group label-floating is-select">
+                        <label class="control-label">
+                        </label>
+                        <select class="selectpicker form-control"  #ref9="ngModel"
+                        [(ngModel)]="relation">
+                            <option value="MA">father</option>
+                            <option value="FE">mother</option>
+                            <option value="TG">brother</option>
+                            <option value="TG">sister</option>
+                        </select>
+                    </div>
+                  </div>
+                  <div>
+                      <input type="radio" id="contactChoice1" name="contact" value="email"  #ref10="ngModel"
+                      [(ngModel)]="radio1">employed
+                      <input type="radio" id="contactChoice1" name="contact" value="uy"  #ref8="ngModel"
+                      [(ngModel)]="radio2">unemployed
+                  </div>
+    </div>
+            
+            <div class="row">
+                <div class="col col-lg-5 col-md-6 col-sm-12 col-12">
+                    <div class="form-group label-floating">
+                        <label class="control-label">first name</label>
+                        <input class="form-control" placeholder="pooja" type="email" #ref11="ngModel"
+                        [(ngModel)]="Fname" required minlength="3">
+                        <label *ngIf="!ref11.valid && ref11.touched" > <span style="color:red">name is required</span></label>
+                        <label *ngIf="ref11.control.hasError('minlength')" ><span style="color:red">atleast 3 letter required</span></label>
+                    </div>
+                </div>
+            
+                <div class="col col-lg-5 col-md-6 col-sm-12 col-12">
+                    <div class="form-group label-floating is-empty">
+                        <label class="control-label">last name</label>
+                        <input class="form-control" placeholder="last name" type="text" #ref1="ngModel"
+                        [(ngModel)]="Lname" required minlength="2">
+                        <label *ngIf="!ref1.valid && ref1.touched"  ><span style="color:red">last name is required</span></label>
+        <label *ngIf="ref1.control.hasError('minlength')" ><span style="color:red">atlest 2 letter enter</span></label>
+                    </div>
+                </div>
+            
+            <div class="col col-lg-8 col-md-8 col-sm-12 col-12">
+                <div class="form-group label-floating is-empty">
+                    <label class="control-label">linkedin profile</label>
+                    <input class="form-control" placeholder="https://www.linkedin.com/company/login/" type="text"  #ref3="ngModel"
+                    [(ngModel)]="linkedin">
+                </div>
+            </div>
+                <div class="col col-lg-5 col-md-5 col-sm-12 col-12">
+                    <div class="form-group date-time-picker label-floating">
+                        <div class="form-group label-floating is-select">
+                            <label class="control-label">educational qualification
+                            </label>
+                            <select class="selectpicker form-control"  #ref2="ngModel"
+                            [(ngModel)]="edu">
+                                <option value="MA">studied the world</option>
+                                <option value="FE">MCA</option>
+                                <option value="TG">b.tec(cse)</option>
+                                <option value="TG">other</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-lg-5 col-md-5 col-sm-12 col-12">
+                    <div class="form-group label-floating is-select">
+                        <label class="control-label">annual income
+                          </label>
+                          <select class="selectpicker form-control"  #ref4="ngModel"
+                          [(ngModel)]="salery">
+                              <option value="MA">******</option>
+                              <option value="FE">*******</option>
+                          </select>
+                    </div>
+                </div>
+                <div class="col col-lg-5 col-md-5 col-sm-12 col-12">
+                    <div class="form-group label-floating is-select">
+                        <label class="control-label">type of job
+                          </label>
+                          <select class="selectpicker form-control"  #ref6="ngModel"
+                          [(ngModel)]="jobtype">
+                              <option value="MA">government employee</option>
+                              <option value="FE">private employee</option>
+                              <option value="FE">self employee</option>
+                          </select>
+                    </div>
+                </div>
+                <div class="col col-lg-5 col-md-5 col-sm-12 col-12">
+                    <div class="form-group label-floating is-select">
+                        <label class="control-label">employeement status
+                          </label>
+                          <select class="selectpicker form-control"  #ref23="ngModel"
+                          [(ngModel)]="empstatus">
+                              <option value="MA">in service</option>
+                              <option value="FE">retierd</option>
+                          </select>
+                    </div>
+                </div>
+           </div>
+           <p>add new member</p>
+           <div class="row">
+              <div class="col col-lg-4 col-md-4 col-sm-12 col-12">
+                  <a href="#" class="btn">SKIP</a>
+                  <a href="#" class="btn">Skip all</a>
+              </div>
+              <div class="col col-lg-7 col-md-7 col-sm-12 col-12 text-right">
+                  <button class="btn btn-info">Save</button>
+                  <button class="btn btn-danger">Save &amp; Next</button>
+              </div>
+          </div>
+          
+            </div>
+      </div>
+    </div>
+    </form>
+</div>
+</body>
+</html>

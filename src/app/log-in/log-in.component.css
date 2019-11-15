@@ -1,0 +1,8 @@
+.jumbotron{
+    border:thin rgb(230,178,87)solid;
+    margin: 20px;
+    padding: 30px;
+    width: 400px;
+    border-radius: 25px;
+
+}

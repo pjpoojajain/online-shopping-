@@ -1,0 +1,19 @@
+.container{
+    left:45%;
+    top:50%;
+    margin-left:-15%;
+    position:absolute;
+    margin-top:-15%;
+}
+
+
+
+
+.jumbotron{
+    border:thin rgb(230,178,87)solid;
+    margin: 50px;
+    padding: 70px;
+    width: 400px;
+    border-radius: 25px;
+
+}

@@ -1,0 +1,24 @@
+
+<div class="jumbotron">
+  <div class="container text-center">
+      <img src="/assets/home image1.jpg">
+    <h1>Home Decor Store</h1>      
+    <p>Mission, Vission & Values</p>
+  </div>
+</div>
+<div class="container">    
+  <div class="row">
+    <div class="col-sm-4" *ngFor="let i of homeacc|filter:srch">
+      <div class="panel panel-primary">
+        <div class="panel-heading">{{i.name}}</div>
+        <div class="panel-body panel-height">
+          <img src={{i.image}} class="img-responsive" style="width:150px; height:150px" alt="Image">
+        </div>
+        <div class="panel-footer"><a (click)="do1(i)" >price:{{i.price}}</a></div>
+      </div>
+    </div>
+   </div>
+</div>
+<div *ngIf="x">
+  <app-home-acc-des [d]="a"></app-home-acc-des> >
+</div>

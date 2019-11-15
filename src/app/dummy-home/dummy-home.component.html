@@ -1,0 +1,97 @@
+<html>
+  <head>
+    <style>
+     .bg-grey {
+      background-color: #f6f6f6;
+  }
+    </style>
+  </head>
+<body>
+    
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+          
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a class="navbar-brand" [routerLink]="['home']">Home</a>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                          Cloths
+                        </a>
+                        <div class="dropdown-menu">
+                          <li><a class="dropdown-item" [routerLink]="['man']">Men's</a></li>
+                        <li><a class="dropdown-item" [routerLink]="['women']">Women's</a></li>
+                    <li> <a class="dropdown-item" [routerLink]="['kid']">Kid's</a></li>
+                        </div>
+                </li>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                          Fashion
+                        </a>
+                        <div class="dropdown-menu">
+                          <li><a class="dropdown-item"  [routerLink]="['bag']">Bags</a></li>
+                        <li>  <a class="dropdown-item"  [routerLink]="['beauti']" >Beauti&Spa</a></li>
+                        <li>  <a class="dropdown-item" href="#" >Footwear</a></li>
+                        <li>  <a class="dropdown-item" [routerLink]="['watch']">Watches</a></li>
+                        </div>
+                </li>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                         Home&Applience
+                        </a>
+                        <div class="dropdown-menu">
+                            <li><a class="dropdown-item" [routerLink]="['homeAccessories']">HomeAccessories</a></li>
+                        <li> <a class="dropdown-item" href="#" >Furniture</a></li>
+                    <li> <a class="dropdown-item" href="#" >kitchinAccessories</a></li>
+                        </div>
+                </li>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                         BabyCare & Toys
+                        </a>
+                        <div class="dropdown-menu">
+                            <li><a class="dropdown-item" [routerLink]="['toy']">Toys</a></li>
+                        <li> <a class="dropdown-item" [routerLink]="['babyacc']">BabyAccessaries</a></li>
+                    <li> <a class="dropdown-item" [routerLink]="['babycosm']">BabyCosmatics</a></li>
+                        </div>
+                </li>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                         Electronics-Item
+                        </a>
+                        <div class="dropdown-menu">
+                            <li><a class="dropdown-item" [routerLink]="['mobile']">Mobiles</a></li>
+                        <li> <a class="dropdown-item"[routerLink]="['laptop']">Laptops</a></li>
+                    <li> <a class="dropdown-item"  [routerLink]="['tv']">TV</a></li>
+                        </div>
+                </li>
+          </ul>
+          
+         
+             
+          <ul class="nav navbar-nav navbar-right">
+        
+            
+            <li><a routerLink="login" ><span class="glyphicon glyphicon-log-in"></span> Log in</a></li>
+            <li> <a routerLink="admin"><span class="glyphicon glyphicon-log-in"></span>Admin</a></li>
+            <li> <a routerLink="register"><span class="glyphicon glyphicon-registration-mark"></span> Register</a></li>
+             <li> <a routerLink="cart"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+             <li> <a routerLink="familyinfo"><span class="glyphicon glyphicon-shopping-cart"></span>familyinfo</a></li>
+             
+          </ul>
+          
+          
+        </div>
+      </div>
+</nav>
+    <router-outlet></router-outlet>
+    
+  </body>
+  </html>

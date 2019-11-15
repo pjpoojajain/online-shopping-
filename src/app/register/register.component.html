@@ -1,0 +1,86 @@
+<head>
+  
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true">
+  <style>
+    form {
+        background-color: floralwhite;
+    }
+  </style>
+ </head>
+ <body>
+    <div class="container" >
+        <form class="jumbotron" #ref="ngForm" (ngSubmit)="readData(ref)">
+
+        <h3 align="center"><b>Register here</b></h3>
+    
+    <div class="form-group" >
+        <label >First name <sup>*</sup></label>
+        <input type="text" name="Fname" class="form-control" placeholder="Enter First Name" #ref11="ngModel"
+          [(ngModel)]="Fname" required minlength="3" #spy>
+          <label *ngIf="!ref11.valid && ref11.touched" > <span style="color:red">name is required</span></label>
+          <label *ngIf="ref11.control.hasError('minlength')" ><span style="color:red">atleast 3 letter required</span></label>
+    </div>     
+    <div class="form-group">
+        <label>Last name <sup>*</sup></label>
+        <input type="text" name="Lname" class="form-control" placeholder="Enter Last Name" #ref1="ngModel"
+        [(ngModel)]="Lname" required minlength="2" #spy1>
+        <label *ngIf="!ref1.valid && ref1.touched"  ><span style="color:red">last name is required</span></label>
+        <label *ngIf="ref1.control.hasError('minlength')" ><span style="color:red">atlest 2 letter enter</span></label>
+    </div>
+    <div class="form-group">
+          <label>email</label>
+          <input type="email" name="mail" class="form-control" #email="ngModel" [(ngModel)]="mail" placeholder="Enter valid Email" size="30"><br>
+    </div>
+    
+      <div class="form group">
+
+        <label >Create password<sup>*</sup></label>
+        <input type="password" name="pw" class="form-control" placeholder="create password" #pass="ngModel" [(ngModel)]="pw" #pass2>
+      </div>
+     <div class="form group">
+          <label>Confirm password<sup>*</sup></label>
+          <input type="password" name="cp" class="form-control" #pass="ngModel" [(ngModel)]="cpp">
+        </div>
+   <div class="form-group">
+            <div class="controls">
+              <button click="m1"class="btn btn-large btn-success">register</button>
+            </div>
+   </div>
+         </form>
+         </div>
+  
+         </body>
+
+  
+         <table border='1'>  
+          
+          <tr>  
+            <td>First name </td>  
+            <td>Last name</td>  
+            <td>email</td>
+            <td>Create password </td>
+            <td>Confirm password</td>
+            <td>Edit</td>  
+            <td>Delete</td>  
+          </tr>  
+          <tr *ngFor="let kk of Repdata;let ind = index">  
+               
+            <td>{{ind + 1}}</td>  
+            <td>{{kk.Fname}}</td>  
+            <td>{{kk.Lname}}</td>  
+            <td>{{kk.mail}}</td>  
+            <td>{{kk.pw}}</td>
+            <td>{{kk.cp}}</td>  
+            <td><a (click)="Fname(kk)" style="color:blueviolet">Edit</a></td>  
+            <td><a (click)="Lname(kk._id)" style="color:blueviolet">Delete</a>  </td>  
+            <td><a (click)="mail(kk)" style="color:blueviolet">Edit</a></td>  
+            <td><a (click)="pw(kk._id)" style="color:blueviolet">Delete</a>  </td>  
+            <td><a (click)="cp(kk)" style="color:blueviolet">Edit</a></td>  
+           
+          </tr>  
+        </table>
+     
+          
+         

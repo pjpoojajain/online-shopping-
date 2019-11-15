@@ -1,0 +1,17 @@
+ 
+ 
+ [
+ 
+ {"name":"apple7s","image":"./assets/515Fh3bfSRL._SY300_QL70_.jpg","price":59999,"Des":"32 GB ROM,4.7 inch Retina HD Display,12MP Rear Camera | 7MP Front Camera,Li-Ion Battery,Apple A10 Fusion 64-bit processor and Embedded M10 Motion Co-processor"},        
+  {"name":"apple6s","image":"./assets/apple2.jpg","price":22000,"Des":"32 GB ROM,4.7 inch Retina HD Display,12MP Rear Camera | 7MP Front Camera,Li-Ion Battery,Apple A10 Fusion 64-bit processor and Embedded M10 Motion Co-processor"},
+     {"name":"applex","image":"./assets/apple111.jpg","price":65000,"Des":"32 GB ROM,4.7 inch Retina HD Display,12MP Rear Camera | 7MP Front Camera,Li-Ion Battery,Apple A10 Fusion 64-bit processor and Embedded M10 Motion Co-processor"},
+       {"name":"oppo A51w","image":"./assets/oppo-f1s-gold-250x250.jpg","price":20000,"Des":"32 GB ROM,4.7 inch Retina HD Display,12MP Rear Camera | 7MP Front Camera,Li-Ion Battery,Apple A10 Fusion 64-bit processor and Embedded M10 Motion Co-processor"},
+       {"name":"Best oppo R9","image":"./assets/oppo-mobile-250x250.jpg","price":28000,"Des":"32 GB ROM,4.7 inch Retina HD Display,12MP Rear Camera | 7MP Front Camera,Li-Ion Battery,Apple A10 Fusion 64-bit processor and Embedded M10 Motion Co-processor"},
+       {"name":"oppo I7","image":"./assets/oppo-319-555x553.png","price":16000,"Des":"32 GB ROM,4.7 inch Retina HD Display,12MP Rear Camera | 7MP Front Camera,Li-Ion Battery,Apple A10 Fusion 64-bit processor and Embedded M10 Motion Co-processor"},
+          {"name":"lenovo voibe k5 note","image":"./assets/image.mi.jpg","price":11000,"Des":"32 GB ROM,4.7 inch Retina HD Display,12MP Rear Camera | 7MP Front Camera,Li-Ion Battery,Apple A10 Fusion 64-bit processor and Embedded M10 Motion Co-processor"},
+           {"name":"lenovo k6 power","image":"./assets/lenovo-vibe-k5-plus.jpg","price":10000,"Des":"32 GB ROM,4.7 inch Retina HD Display,12MP Rear Camera | 7MP Front Camera,Li-Ion Battery,Apple A10 Fusion 64-bit processor and Embedded M10 Motion Co-processor"},
+            {"name":"L2016 lenovo","image":"./assets/lenovo-smartphone-vibe-k5-front-back.png.jpg","price":8000,"Des":"32 GB ROM,4.7 inch Retina HD Display,12MP Rear Camera | 7MP Front Camera,Li-Ion Battery,Apple A10 Fusion 64-bit processor and Embedded M10 Motion Co-processor"}
+
+
+
+ ]           

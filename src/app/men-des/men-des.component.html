@@ -1,0 +1,31 @@
+
+<!-- <table border="1" align="center">
+ 
+  <div class="row">
+
+  <div class="col-sm-4">
+  
+  <tr><img src={{d.image}} class="image-responsive" style="width:100%" alt="image"></tr>
+  </div>
+  <div class="col-sm-6">
+  <tr><h4 align="center">{{d.name}}</h4></tr>
+  <hr>
+  <tr><h4 align="left"><span style="color:red">price:{{d.price}}</span></h4></tr>
+ <tr><li><h4 align="center" >{{d.Des}}</h4></li></tr>
+  </div>
+  </div>
+  <button (click)="addtocart()" class="btn btn-primary">Add To Cart</button>
+  <button (click)="buynow()" class="btn btn-primary">BUY NOW</button>
+ </table> -->
+
+ <table border="1">
+  <tr>
+   <h4 align="center"> {{b.name}}</h4></tr>
+ <tr> <img src={{b.image}} class="img-responsive" style="width:100%" alt="Image"></tr>
+ <tr><h4>Price:₹{{b.price}}</h4></tr>
+ <tr><h4>Description: {{b.Des}}</h4></tr>
+  <br/>
+  <button  (click)="addToCart(b)" class="btn btn-primary">AddToCart</button>
+  <button (click)="callToRouter()" class="btn btn-success">BuyNow</button>
+ 
+</table>

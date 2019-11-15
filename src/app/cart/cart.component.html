@@ -1,0 +1,28 @@
+<!-- <ul *ngFor="let i of cartarr">
+  <li>{{i.name}}</li>
+  <li>{{i.price}}</li>
+  <li>{{i.Des}}</li>
+</ul>
+<app-mobile-description (myevent)="getDataFrommobile($event)"></app-mobile-description> -->
+
+
+<div *ngFor="let i of cartarr1; let in=index;">
+  <table>
+      
+         
+       
+     <tr> <td class="w-50 p-8" ><img src={{i.image}} width=40% height=40% ></td> <td><ul >
+          <li><h4>Name:{{i.name}}</h4></li>
+       
+          <li><h4>Price:{{i.price}}</h4></li>
+          <li><h4>Description:{{i.Des}}</h4></li>
+          </ul></td></tr>
+          <tr></tr>
+          <tr><td align="center"><button class='btn btn-primary'>BUY NOW</button>&nbsp;&nbsp;<button class='btn btn-success' (click)="remove(in)">REMOVE</button></td></tr>
+     
+     
+    </table>
+    <hr>
+  </div>
+  
+  

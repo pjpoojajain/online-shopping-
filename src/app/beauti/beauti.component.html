@@ -1,0 +1,25 @@
+
+  
+<div class="jumbotron">
+  <div class="container text-center">
+      <img src="/assets/coshome.jpg">
+    <h1>Cosmatics Store</h1>      
+  </div>
+</div>
+
+<div class="container">    
+  <div class="row">
+    <div class="col-sm-4" *ngFor="let i of beauti">
+      <div class="panel panel-primary">
+        <div class="panel-heading">{{i.name}}</div>
+        <div class="panel-body panel-height">
+          <img src={{i.image}} class="img-responsive" style="width:150px; height:150px" alt="Image">
+        </div>
+        <div class="panel-footer"><a (click)="baby1(i)" >price:{{i.price}} <span style="color:red">discount 8%off</span></a></div>
+      </div>
+    </div>
+   </div>
+</div>
+<div *ngIf="x">
+  <app-beauti-dec [c]="a"></app-beauti-dec> 
+</div>

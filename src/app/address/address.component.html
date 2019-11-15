@@ -1,0 +1,73 @@
+<head>
+  <style>
+    form {
+        background-color: ghostwhite;
+    }
+  </style>
+ </head>
+ <body>
+ <div class="container">
+    <div class="container text-left" >
+        <form class="jumbotron" #ref="ngForm" (ngSubmit)="readData(ref)">
+          <h2 align="center"><b>Delivary Address</b></h2>
+
+    <div>
+      <div class="form-group">
+        <label>Address<sup>*</sup></label>
+        <input type="text" name="add" class="form-control" placeholder="address" required minlength="10" #add="ngModel" [(ngModel)]="addr">
+        <label *ngIf="!add.valid && add.touched" ><span style="color:red" >delivary address is mandatory</span></label><br>
+        <label *ngIf="add.control.hasError('minlength')"><span style="color:red" > min length shd be 10</span> </label>
+
+        
+      </div>
+    </div>
+    <div>
+        <div class="form-group">
+          <label>Address(line 2)<sup>*</sup></label>
+          <input type="text" class="form-control" #add2="ngModel" [(ngModel)]="address" name="add2" size="40">
+        </div>
+    </div>
+    <div>
+        <div class="form-group">
+          <label>City<sup>*</sup></label>
+          <input type="text" name="city" class="form-control" #city="ngModel" [(ngModel)]="city1" required >
+        </div>
+    </div>
+    <div>
+        <div class="form-group">
+          <label>State<sup>*</sup></label>
+          <input type="text" name="State" class="form-control" #state="ngModel" [(ngModel)]="state1">
+        </div>
+    </div>
+    <div>
+        <div class="form-group">
+          <label>Zip/Postal Code<sup>*</sup></label>
+          <input type="text" name="code" class="form-control" #pin="ngModel" [(ngModel)]="pin1">
+        </div>
+    </div>
+    <div>
+        <div class="form-group">
+          <label >Country<sup>*</sup></label>
+          <input type="text" name="count" class="form-control" #country="ngModel" [(ngModel)]="country1">
+        </div>
+    </div>
+    <h5>Additional information</h5>
+    <div>
+        <div class="form-group">
+          <label>Home Ph Number<sup>*</sup></label>
+          <input type="text" name="HomePH" class="form-control" placeholder="land-line number" #hno="ngModel" [(ngModel)]="hno1">
+        </div>
+    </div>
+    
+        <div class="form-group">
+          <label>Mobile Number<sup>*</sup></label>
+          <input type="text" name="mobile" class="form-control" placeholder="mobile number" #mno="ngModel" [(ngModel)]="mno1">
+        </div>
+        <div class="form-group">
+          <button  class="btn btn-large btn-success" >ADD</button>
+        </div>
+
+        </form>
+        </div>
+        </div>
+        </body>

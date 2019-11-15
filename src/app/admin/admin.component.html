@@ -1,0 +1,28 @@
+<div align="center">
+  <div class="d-flex justify-content-center">
+      <form class="jumbotron" #ref="ngForm" (ngSubmit)="readData(ref)">
+
+
+
+<h3 align="center"><b><span style="color:blue">Login</span></b></h3><br>
+<div class="form-group">
+<label>Email</label>
+ <input type="text" name="admin" class="form-control" placeholder="Enter UserName" #mail="ngModel" [(ngModel)]="email"
+   required minlength="3"  ngModel>
+ <label *ngIf="!mail.valid && mail.touched" ><span style="color:red">username is mandatory</span></label>
+ <label *ngIf="mail.control.hasError('minlength')"><span style="color:red">, atlest 3 letter required</span></label>
+</div>
+<div class="form group">
+<label>Password</label>
+<input type="password" name="adpass" class="form-control" placeholder="enter password" #pws="ngModel" [(ngModel)]="password"
+ngModel>
+</div><br>
+
+ <div class="form-group">
+   <div class="controls">
+     <button click="m1"class="btn btn-large btn-success">login</button><div *ngIf="x"><label>{{y}}</label></div>
+   </div>
+</div>
+</form>
+</div>
+</div>

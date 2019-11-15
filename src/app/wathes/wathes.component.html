@@ -1,0 +1,30 @@
+<!-- <input [(ngModel)]="srch" placeholder="search....." name="search"> -->
+<!-- <button type="submit" class="btn btn-success"><i class="fa fa-search"></i></button> -->
+
+<input [(ngModel)]="srch" placeholder="search....." name="search">
+<button (click)="sort('price')" class="btn btn-success"><i class="fa fa-search"></i>Sort By Price</button>
+<button (click)="sort('name')" class="btn btn-success"><i class="fa fa-search"></i>Sort By Name</button>
+
+<div class="jumbotron">
+  <div class="container text-center">
+      <div class="panel-body"><img src="\assets\BANR_MENS-WATCHES2.jpg" class="img-responsive" style="width:200%" alt="Image"></div>
+  </div>
+</div>
+
+<h1 align="center">watches</h1>
+<div class="container">    
+  <div class="row">
+    <div class="col-sm-4" *ngFor="let i of watch|sortPipe:{property:column,direction:direction}|filter:srch">
+      <div class="panel panel-primary">
+        <div class="panel-heading">{{i.name}}</div>
+        <div class="panel-body panel-height">
+          <img src={{i.image}} class="img-responsive" style="width:150px; height:150px" alt="Image">
+        </div>
+        <div class="panel-footer"><a (click)="do1(i)" >price:{{i.price}} <span style="color:red">discount 8%off</span></a></div>
+      </div>
+    </div>
+   </div>
+</div>
+<div *ngIf="x">
+  <app-watches-des [d]="a"></app-watches-des> >
+</div>

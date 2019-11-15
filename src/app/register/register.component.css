@@ -1,0 +1,25 @@
+.container{
+    left:45%;
+    top:50%;
+    margin-left:-15%;
+    position:absolute;
+    margin-top:-15%;
+}
+.jumbotron{
+    border:thin rgb(230,178,87)solid;
+    margin: 20px;
+    padding: 30px;
+    width: 400px;
+    border-radius: 25px;
+
+}
+/* Tablet Landscape */
+@media screen and (max-width: 1060px) {
+    #primary { width:67%; }
+    #secondary { width:30%; margin-left:3%;}  
+}
+/* Tabled Portrait */
+@media screen and (max-width: 768px) {
+    #primary { width:100%; }
+    #secondary { width:100%; margin:0; border:none; }
+}

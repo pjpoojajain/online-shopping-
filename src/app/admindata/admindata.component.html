@@ -1,0 +1,21 @@
+<div align="center" table="border">
+  <div class="d-flex justify-content-center">
+      <form  #ref="ngForm" (ngSubmit)="admindata(ref)">
+<div class="form group">
+  <label>Picture</label>
+  <input type="text" name="pic" class="form-control" #pws="ngModel" [(ngModel)]="item"
+  ngModel>
+</div>
+<div class="form group">
+    <label>Price</label>
+    <input type="text" name="price" class="form-control" #pws="ngModel" [(ngModel)]="item"
+    ngModel>
+</div>
+<div class="form group">
+      <label>Name</label>
+      <input type="text" name="name" class="form-control" #pws="ngModel" [(ngModel)]="item"
+      ngModel>
+</div>
+</form>
+</div>
+</div>
